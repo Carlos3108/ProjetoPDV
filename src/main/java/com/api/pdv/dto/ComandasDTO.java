@@ -3,13 +3,13 @@ package com.api.pdv.dto;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-public class ComandasDto {
+public class ComandasDTO {
     @NotBlank
-    private int codProdutos;
+    private String codProdutos;
 
     @NotBlank
     @Size
-    private float quantidade;
+    private Integer quantidade;
 
 
 }
