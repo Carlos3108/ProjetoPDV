@@ -1,4 +1,4 @@
-package com.api.pdv.dtos;
+package com.api.pdv.dto;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
