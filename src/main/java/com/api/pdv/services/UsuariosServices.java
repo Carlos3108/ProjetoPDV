@@ -1,15 +1,14 @@
 package com.api.pdv.services;
 
-import com.api.pdv.repositories.UsuariosRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.api.pdv.repositories.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UsuariosServices {
 
-    final UsuariosRepository usuariosRepository;
+    final UsuarioRepository usuariosRepository;
 
-    public UsuariosServices(UsuariosRepository usuariosRepository){
+    public UsuariosServices(UsuarioRepository usuariosRepository){
         this.usuariosRepository = usuariosRepository;
     }
 }

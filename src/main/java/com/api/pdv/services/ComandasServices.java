@@ -1,14 +1,14 @@
 package com.api.pdv.services;
 
-import com.api.pdv.repositories.ComandasRepository;
+import com.api.pdv.repositories.ComandaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ComandasServices {
 
-    final ComandasRepository comandasRepository;
+    final ComandaRepository comandasRepository;
 
-    public ComandasServices(ComandasRepository comandasRepository){
+    public ComandasServices(ComandaRepository comandasRepository){
         this.comandasRepository = comandasRepository;
     }
 
