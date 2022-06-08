@@ -1,14 +1,14 @@
 package com.api.pdv.services;
 
-import com.api.pdv.repositories.ProdutosRepository;
+import com.api.pdv.repositories.ProdutoRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ProdutosServices {
 
-    final ProdutosRepository produtosRepository;
+    final ProdutoRepository produtosRepository;
 
-    public ProdutosServices(ProdutosRepository produtosRepository){
+    public ProdutosServices(ProdutoRepository produtosRepository){
         this.produtosRepository = produtosRepository;
     }
 }

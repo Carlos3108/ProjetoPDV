@@ -5,7 +5,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "TB_PRODUTO")
-public class ProdutosModel {
+public class ProdutoModel {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,6 +16,9 @@ public class ProdutosModel {
 
     @Column(nullable = false, unique = true, length = 6)
     private float valorProduto;
+
+    @Column(nullable = false, length = 3)
+    private Integer quantidade;
 
     public UUID getCodProdutos() {
         return codProdutos;
@@ -39,5 +42,13 @@ public class ProdutosModel {
 
     public void setValorProduto(float valorProduto) {
         this.valorProduto = valorProduto;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 }
