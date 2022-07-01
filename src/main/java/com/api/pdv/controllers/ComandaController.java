@@ -1,6 +1,6 @@
 package com.api.pdv.controllers;
 
-import com.api.pdv.services.ComandasServices;
+import com.api.pdv.services.ComandaService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/comanda")
 public class ComandaController {
 
-    final ComandasServices comandasServices;
+    final ComandaService comandaService;
 
-    public ComandaController(ComandasServices comandasServices) {
-        this.comandasServices = comandasServices;
+    public ComandaController(ComandaService comandaService) {
+        this.comandaService = comandaService;
     }
 }
