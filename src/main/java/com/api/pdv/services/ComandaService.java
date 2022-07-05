@@ -4,11 +4,11 @@ import com.api.pdv.repositories.ComandaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ComandasServices {
+public class ComandaService {
 
     final ComandaRepository comandasRepository;
 
-    public ComandasServices(ComandaRepository comandasRepository){
+    public ComandaService(ComandaRepository comandasRepository){
         this.comandasRepository = comandasRepository;
     }
 

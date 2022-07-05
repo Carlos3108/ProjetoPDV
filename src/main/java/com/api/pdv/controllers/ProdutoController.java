@@ -1,6 +1,6 @@
 package com.api.pdv.controllers;
 
-import com.api.pdv.services.ProdutosServices;
+import com.api.pdv.services.ProdutoService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/produtos")
 public class ProdutoController {
-    final ProdutosServices produtosServices;
+    final ProdutoService produtoService;
 
-    public ProdutoController(ProdutosServices produtosServices) {
-        this.produtosServices = produtosServices;
+    public ProdutoController(ProdutoService produtoService) {
+        this.produtoService = produtoService;
     }
 }
