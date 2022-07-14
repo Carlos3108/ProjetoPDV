@@ -1,12 +1,8 @@
 package com.api.pdv.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.constraints.br.CPF;
-import org.springframework.format.annotation.DateTimeFormat;
 import javax.validation.constraints.NotBlank;
-import java.text.DateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class UsuarioDTO {
     @NotBlank

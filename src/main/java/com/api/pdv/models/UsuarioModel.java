@@ -1,13 +1,7 @@
 package com.api.pdv.models;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.apache.tomcat.jni.Local;
-import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
-import java.text.DateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.UUID;
 
