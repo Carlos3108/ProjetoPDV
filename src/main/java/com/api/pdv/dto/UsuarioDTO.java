@@ -1,7 +1,10 @@
 package com.api.pdv.dto;
 
 import org.hibernate.validator.constraints.br.CPF;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.validation.constraints.NotBlank;
+import java.time.DateTimeException;
 import java.time.LocalDate;
 
 public class UsuarioDTO {
@@ -9,7 +12,7 @@ public class UsuarioDTO {
     private String nomeFunc;
 
     @NotBlank
-    private LocalDate nascimento;
+    private DateTimeException nascimento;
 
     @NotBlank
     @CPF()
@@ -29,11 +32,11 @@ public class UsuarioDTO {
         this.nomeFunc = nomeFunc;
     }
 
-    public LocalDate getNascimento() {
+    public DateTimeException getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(LocalDate nascimento) {
+    public void setNascimento(DateTimeException nascimento) {
         this.nascimento = nascimento;
     }
 
