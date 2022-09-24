@@ -22,7 +22,7 @@ public class UsuarioModel {
 
 
     @Column(nullable = false)
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @DateTimeFormat
     private Date nascimento;
 
     @Column(nullable = false, unique = true, length = 10)
