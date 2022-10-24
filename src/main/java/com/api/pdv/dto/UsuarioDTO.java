@@ -1,19 +1,16 @@
 package com.api.pdv.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.constraints.br.CPF;
-import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.validation.constraints.NotBlank;
-import java.text.DateFormat;
-import java.time.LocalDate;
-import java.util.Date;
+import java.time.DateTimeException;
 
 public class UsuarioDTO {
     @NotBlank
     private String nomeFunc;
 
     @NotBlank
-    private LocalDate nascimento;
+    private DateTimeException nascimento;
 
     @NotBlank
     @CPF()
@@ -33,11 +30,11 @@ public class UsuarioDTO {
         this.nomeFunc = nomeFunc;
     }
 
-    public LocalDate getNascimento() {
+    public DateTimeException getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(LocalDate nascimento) {
+    public void setNascimento(DateTimeException nascimento) {
         this.nascimento = nascimento;
     }
 
