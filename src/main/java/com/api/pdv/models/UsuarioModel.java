@@ -2,12 +2,15 @@ package com.api.pdv.models;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
 @Entity
 @Table(name = "TB_USUARIO")
-public class UsuarioModel {
+public class UsuarioModel implements Serializable{
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -22,7 +25,6 @@ public class UsuarioModel {
 
 
     @Column(nullable = false)
-    @DateTimeFormat
     private Date nascimento;
 
     @Column(nullable = false, unique = true, length = 10)

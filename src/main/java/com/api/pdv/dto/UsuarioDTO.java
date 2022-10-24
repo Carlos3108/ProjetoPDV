@@ -1,11 +1,9 @@
 package com.api.pdv.dto;
 
 import org.hibernate.validator.constraints.br.CPF;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotBlank;
 import java.time.DateTimeException;
-import java.time.LocalDate;
 
 public class UsuarioDTO {
     @NotBlank

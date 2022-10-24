@@ -1,11 +1,13 @@
 package com.api.pdv.models;
 
 import javax.persistence.*;
+
+import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
 @Table(name = "TB_PRODUTO")
-public class ProdutoModel {
+public class ProdutoModel implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

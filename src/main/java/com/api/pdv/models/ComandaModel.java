@@ -1,11 +1,13 @@
 package com.api.pdv.models;
 
 import javax.persistence.*;
+
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "TB_COMANDA")
-public class ComandaModel {
+public class ComandaModel implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
