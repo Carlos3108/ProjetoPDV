@@ -3,14 +3,15 @@ package com.api.pdv.dto;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.NotBlank;
-import java.time.DateTimeException;
+import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 public class UsuarioDTO {
     @NotBlank
     private String nomeFunc;
 
-    @NotBlank
-    private DateTimeException nascimento;
+    @NotNull
+    private Date nascimento;
 
     @NotBlank
     @CPF()
@@ -30,11 +31,11 @@ public class UsuarioDTO {
         this.nomeFunc = nomeFunc;
     }
 
-    public DateTimeException getNascimento() {
+    public Date getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(DateTimeException nascimento) {
+    public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
     }
 

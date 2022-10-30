@@ -1,6 +1,5 @@
 package com.api.pdv.models;
 
-import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
@@ -27,7 +26,7 @@ public class UsuarioModel implements Serializable{
     @Column(nullable = false)
     private Date nascimento;
 
-    @Column(nullable = false, unique = true, length = 10)
+    @Column(nullable = false, unique = true, length = 256)
     private String login;
 
     @Column(nullable = false, length = 10)
