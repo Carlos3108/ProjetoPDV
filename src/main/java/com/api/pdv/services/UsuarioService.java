@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class UsuarioService {
@@ -27,7 +28,7 @@ public class UsuarioService {
         return this.usuarioRepository.findAll();
     }
 
-    public Optional<UsuarioModel> obterUsuarioId() {
-        return this.usuarioRepository.findAllById(String cpf);
+    public Optional<UsuarioModel> obterUsuarioId(UUID cpf) {
+        return usuarioRepository.findById(UUID.fromString(String.valueOf(cpf)));
     }
 }

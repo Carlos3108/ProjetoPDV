@@ -11,17 +11,16 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping(value = "/usuario", method = RequestMethod.POST)
 public class UsuarioController {
     final UsuarioService usuarioService;
-     final UsuarioRepository usuarioRepository;
 
-    public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository) {
+    public UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
-        this.usuarioRepository = usuarioRepository;
     }
 
     @PostMapping
@@ -37,8 +36,7 @@ public class UsuarioController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Object> obterUsuarioId(@PathVariable(value = "id_func")){
-        Optional<UsuarioModel> usuarioModelOptional = usuarioService.find
-        return this.usuarioService.obterUsuarioId();
+    public List<UsuarioModel> ob(@PathVariable("id")String cpf){
+        return this.usuarioService.obetrUsuario();
     }
 }
