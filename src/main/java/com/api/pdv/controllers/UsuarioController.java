@@ -15,7 +15,7 @@ import java.util.UUID;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping(value = "/usuario", method = RequestMethod.POST)
+@RequestMapping(value = "/usuario")
 public class UsuarioController {
     final UsuarioService usuarioService;
 
@@ -35,8 +35,8 @@ public class UsuarioController {
         return this.usuarioService.obetrUsuario();
     }
 
-    @GetMapping(value = "/{id}")
-    public List<UsuarioModel> ob(@PathVariable("id")String cpf){
-        return this.usuarioService.obetrUsuario();
+    @GetMapping("/{cpf}")
+    public List<UsuarioModel> obterCPF(@PathVariable String cpf){
+        return this.usuarioService.obterCPF(cpf);
     }
 }

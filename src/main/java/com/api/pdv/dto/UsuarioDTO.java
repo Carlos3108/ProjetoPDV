@@ -1,7 +1,6 @@
 package com.api.pdv.dto;
 
 import org.hibernate.validator.constraints.br.CPF;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
